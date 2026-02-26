@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cu85iy1ie3a7r"]
+
+[ext_resource type="MeshLibrary" uid="uid://cjgbq6lqv68ma" path="res://MeshLibrary/MazeCellLibrary1.tres" id="1_glv2v"]
+
+[node name="Main" type="Node3D" unique_id=1398231811]
+
+[node name="GridMap" type="GridMap" parent="." unique_id=571568641]
+mesh_library = ExtResource("1_glv2v")
+cell_size = Vector3(1, 1, 1)
