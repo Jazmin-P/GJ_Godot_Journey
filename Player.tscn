@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://fbwy6bkwqeo5"]
+
+[ext_resource type="Script" uid="uid://o827kfbufycc" path="res://player.gd" id="1_xhfnw"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xhfnw"]
+
+[node name="Player" type="CharacterBody3D" unique_id=685973167]
+script = ExtResource("1_xhfnw")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=441857983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.31298065, 0)
+current = true
+fov = 70.0
+far = 100.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=186425556]
+light_color = Color(0.8901961, 0.8666667, 0.6784314, 1)
+light_energy = 0.795
+shadow_enabled = true
+shadow_bias = 0.15
+omni_range = 7.66
+omni_attenuation = 1.56
+
+[node name="RayForward" type="RayCast3D" parent="." unique_id=1619925708]
+target_position = Vector3(0, 0, -2)
+collision_mask = 4
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayBack" type="RayCast3D" parent="." unique_id=1978351916]
+target_position = Vector3(0, 0, 2)
+collision_mask = 4
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayRight" type="RayCast3D" parent="." unique_id=162557288]
+target_position = Vector3(2, 0, 0)
+collision_mask = 4
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayLeft" type="RayCast3D" parent="." unique_id=182496696]
+target_position = Vector3(-2, 0, 0)
+collision_mask = 4
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1637442499]
+light_color = Color(0.8906629, 0.8667451, 0.6799643, 1)
+light_energy = 2.0
+spot_attenuation = 2.37
+spot_angle = 64.36
+spot_angle_attenuation = 3.03
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=771331930]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=642804908]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_xhfnw")

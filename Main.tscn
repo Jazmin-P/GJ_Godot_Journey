@@ -1,13 +1,20 @@
 [gd_scene format=3 uid="uid://cojwjepjcflb7"]
 
 [ext_resource type="Script" uid="uid://bbsax2g2agie2" path="res://MazeGeneration.gd" id="1_uu6xs"]
+[ext_resource type="PackedScene" uid="uid://fbwy6bkwqeo5" path="res://Player.tscn" id="2_cm0pq"]
 [ext_resource type="MeshLibrary" uid="uid://bvodgv33iunyl" path="res://MeshLibrary/MeshLibrary.tres" id="2_r0du0"]
 
-[node name="Node3D" type="Node3D" unique_id=831054979]
+[node name="Main" type="Node3D" unique_id=831054979]
+
+[node name="MazeGeneration" type="Node3D" parent="." unique_id=1108786924]
 script = ExtResource("1_uu6xs")
+
+[node name="GridMap" type="GridMap" parent="MazeGeneration" unique_id=71301923]
+mesh_library = ExtResource("2_r0du0")
+
+[node name="Player" parent="." unique_id=685973167 instance=ExtResource("2_cm0pq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.233476, 5.1410666, 6.6571617)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=595540520]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 30, 20)
-
-[node name="GridMap" type="GridMap" parent="." unique_id=71301923]
-mesh_library = ExtResource("2_r0du0")
+visible = false
