@@ -1,9 +1,13 @@
-[gd_scene format=3 uid="uid://cu85iy1ie3a7r"]
+[gd_scene format=3 uid="uid://cojwjepjcflb7"]
 
-[ext_resource type="MeshLibrary" uid="uid://cjgbq6lqv68ma" path="res://MeshLibrary/MazeCellLibrary1.tres" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://bbsax2g2agie2" path="res://MazeGeneration.gd" id="1_uu6xs"]
+[ext_resource type="MeshLibrary" uid="uid://bvodgv33iunyl" path="res://MeshLibrary/MeshLibrary.tres" id="2_r0du0"]
 
-[node name="Main" type="Node3D" unique_id=1398231811]
+[node name="Node3D" type="Node3D" unique_id=831054979]
+script = ExtResource("1_uu6xs")
 
-[node name="GridMap" type="GridMap" parent="." unique_id=571568641]
-mesh_library = ExtResource("1_glv2v")
-cell_size = Vector3(1, 1, 1)
+[node name="Camera3D" type="Camera3D" parent="." unique_id=595540520]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 30, 20)
+
+[node name="GridMap" type="GridMap" parent="." unique_id=71301923]
+mesh_library = ExtResource("2_r0du0")
