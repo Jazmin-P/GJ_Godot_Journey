@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://c81bg77e6bvaf"]
+[gd_scene format=3 uid="uid://cojwjepjcflb7"]
 
-[ext_resource type="Script" uid="uid://bbsax2g2agie2" path="res://node_3d.gd" id="1_noarx"]
-[ext_resource type="MeshLibrary" uid="uid://ts1c6y3adll4" path="res://MeshLibraryMine.tres" id="2_noarx"]
+[ext_resource type="Script" path="res://node_3d.gd" id="1_noarx"]
+[ext_resource type="MeshLibrary" path="res://MeshLibraryMine.tres" id="2_noarx"]
 
 [node name="Node3D" type="Node3D" unique_id=831054979]
 script = ExtResource("1_noarx")
