@@ -1,7 +1,6 @@
-[gd_scene format=4 uid="uid://coaaom82fb3v5"]
+[gd_scene format=4 uid="uid://ck446sc2id74d"]
 
 [ext_resource type="Texture2D" uid="uid://uul4xcgom5nk" path="res://assets/texture.png" id="2_75h2i"]
-[ext_resource type="PackedScene" uid="uid://ctywlu8kwg2sy" path="res://2scene.tscn" id="2_ju88t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d4gt0"]
 resource_name = "golf"
@@ -338,6 +337,16 @@ mesh = SubResource("ArrayMesh_2jedv")
 [node name="CollisionShape" type="CollisionShape3D" parent="1/StaticBody" unique_id=1251771812]
 shape = SubResource("3")
 
+[node name="2" type="MeshInstance3D" parent="." unique_id=1332619872]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.713557, 0, 12.887245)
+gi_mode = 0
+mesh = SubResource("ArrayMesh_2jedv")
+
+[node name="StaticBody" type="StaticBody3D" parent="2" unique_id=854664570]
+
+[node name="CollisionShape" type="CollisionShape3D" parent="2/StaticBody" unique_id=374724597]
+shape = SubResource("3")
+
 [node name="3" type="MeshInstance3D" parent="." unique_id=693498755]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.0588045, 0, 12.881274)
 gi_mode = 0
@@ -469,6 +478,3 @@ mesh = SubResource("ArrayMesh_chka1")
 shape = SubResource("1")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1087870034]
-
-[node name="2" parent="." unique_id=1949708088 instance=ExtResource("2_ju88t")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.826525, 0, 12.871817)
