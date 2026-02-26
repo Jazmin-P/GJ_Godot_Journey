@@ -1,3 +1,59 @@
 [gd_scene format=3 uid="uid://cqeretmypyvrv"]
 
-[node name="Node3D" type="Node3D" unique_id=528125357]
+[sub_resource type="PlaneMesh" id="PlaneMesh_unb32"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ddjxp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wcb7n"]
+size = Vector3(0.9963379, 1, 0.001)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wcb7n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_umba3"]
+size = Vector3(0.001, 1, 1)
+
+[node name="MazeCell" type="Node3D" unique_id=528125357]
+
+[node name="FloorMesh" type="MeshInstance3D" parent="." unique_id=1938423983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.017910779)
+mesh = SubResource("PlaneMesh_unb32")
+
+[node name="North" type="StaticBody3D" parent="." unique_id=1516723167]
+
+[node name="North" type="MeshInstance3D" parent="North" unique_id=1508357377]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 1, -1.0170532)
+mesh = SubResource("PlaneMesh_ddjxp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="North" unique_id=1377812854]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1, -1.0135833)
+shape = SubResource("BoxShape3D_wcb7n")
+
+[node name="East" type="StaticBody3D" parent="." unique_id=1832615369]
+
+[node name="East" type="MeshInstance3D" parent="East" unique_id=1767836883]
+transform = Transform3D(1.1924881e-08, -0.9999999, 4.3711385e-08, 0, -4.3711385e-08, -0.9999999, 1, 1.1924879e-08, -5.21253e-16, 1, 1, 0)
+mesh = SubResource("PlaneMesh_ddjxp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="East" unique_id=436620098]
+transform = Transform3D(2.3849761e-08, 0, -2, 0, 2, 0, 2, 0, 2.3849761e-08, 0.9943156, 1, -0.017910808)
+shape = SubResource("BoxShape3D_wcb7n")
+
+[node name="South" type="StaticBody3D" parent="." unique_id=765499492]
+
+[node name="South" type="MeshInstance3D" parent="South" unique_id=962413028]
+transform = Transform3D(1, 0, 0, 0, 1.192488e-08, 0.99999994, 0, -0.99999994, 1.192488e-08, 0, 1, 1)
+mesh = SubResource("PlaneMesh_ddjxp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="South" unique_id=1610201950]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1, 0.9790585)
+shape = SubResource("BoxShape3D_wcb7n")
+
+[node name="West" type="StaticBody3D" parent="." unique_id=1113812968]
+
+[node name="West" type="MeshInstance3D" parent="West" unique_id=913838463]
+transform = Transform3D(1.1924881e-08, 1, 0, -1, 1.1924881e-08, 0, 0, 0, 1, -1, 1, 0)
+mesh = SubResource("PlaneMesh_wcb7n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="West" unique_id=1494250919]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.9961717, 1, -0.013399065)
+shape = SubResource("BoxShape3D_umba3")
